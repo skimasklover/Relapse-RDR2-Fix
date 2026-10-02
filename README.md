@@ -1,6 +1,6 @@
 # PS5 RDR2 service-ID whitespace guard
 
-A PS5 homebrew ELF payload that changes a ShellCore service-ID guard to skip entries beginning with an ASCII control character or space. Includes notification toasts, checked tracing syscalls, temporary debugger credentials, and cleanup verification.
+A PS5 homebrew ELF payload that changes a ShellCore service-ID guard to skip entries beginning with an ASCII control character or space. Includes notification toasts, checked tracing syscalls, temporary debugger credentials, and cleanup verification. Not viable for any data loss, console bricking, etc. 
 
 ## Why this exists
 
