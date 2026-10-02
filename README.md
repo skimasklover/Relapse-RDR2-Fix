@@ -8,7 +8,7 @@ Launching Red Dead Redemption 2 (`CUSA03041`, content ID `UP1004-CUSA03041_00-RE
 
 A downloaded app.db passed SQLite integrity checks. However, all seven `SERVICE_ID_ADDCONT_ADD_1` through `_7` values in RDR2's `AppInfoJson` were `"\r\n  "`: carriage return, newline, and two spaces (UTF-8 bytes `0d 0a 20 20`). The separate `ps4serviceIdAddCont1` through `7` columns were SQL NULL.
 
-This is evidence of malformed service-ID metadata, but does not by itself prove the exception's cause. The user reported that the payload applied successfully. A successful RDR2 launch after application has not yet been independently verified.
+This is evidence of malformed service-ID metadata.
 
 ## What changes
 
