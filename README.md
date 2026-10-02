@@ -52,7 +52,7 @@ Send `rdr2-service-id-whitespace-fix-debug.elf` to an already running compatible
 
 ## Validation
 
-See [VALIDATION.md](VALIDATION.md). The local database snapshot and full console logs are intentionally excluded from this upload package.
+See SHA256 hash.
 
 ## License and references
 
