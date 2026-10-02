@@ -6,9 +6,9 @@ A PS5 homebrew ELF payload that changes a ShellCore service-ID guard to skip ent
 
 Launching Red Dead Redemption 2 (`CUSA03041`, content ID `UP1004-CUSA03041_00-REDEMPTION000002`) was followed by an uncaught `std::__sce_v2::out_of_range` exception with reason `invalid string position` in ShellCore's `SceAppInstallerJobQueue` thread.
 
-A downloaded app.db passed SQLite integrity checks. However, all seven `SERVICE_ID_ADDCONT_ADD_1` through `_7` values in RDR2's `AppInfoJson` were `"\r\n  "`: carriage return, newline, and two spaces (UTF-8 bytes `0d 0a 20 20`). The separate `ps4serviceIdAddCont1` through `7` columns were SQL NULL.
+A downloaded app.db passed SQLite integrity checks. However, all seven `SERVICE_ID_ADDCONT_ADD_1` through `_7` values in RDR2's `AppInfoJson` were `"\r\n  "`: carriage return, newline, and two spaces (UTF-8 bytes `0d 0a 20 20`). The separate `ps4serviceIdAddCont1` through `7` columns were SQL NULL. This is evidence of malformed service-ID metadata.
 
-This is evidence of malformed service-ID metadata.
+Others have noted that this could be due to the 60fps patch present in certain PS4 games. I've only tested this and noticed a reduction in crashes for RDR2 so far. 
 
 ## What changes
 
